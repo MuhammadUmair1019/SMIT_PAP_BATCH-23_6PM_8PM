@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <!--
+      About Tables:
+      An HTML table is used to organize data in rows and columns. 
+      Tables make it easy to display structured information for comparison or reference.
+      The basic elements:
+        <table>     - the table itself
+        <thead>     - group of header rows
+        <tbody>     - main body rows
+        <tfoot>     - footer rows
+        <tr>        - table row
+        <th>        - table header cell (bold, centered by default)
+        <td>        - table data cell
+      
+      Tables can use attributes like border, colspan, and rowspan to customize appearance and layout.
+    -->
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Country</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ahmed</td>
+          <td>22</td>
+          <td>Pakistan</td>
+          <td>Karachi</td>
+        </tr>
+        <tr>
+          <td>Ali</td>
+          <td>25</td>
+          <td>Pakistan</td>
+          <td>Lahore</td>
+        </tr>
+        <tr>
+          <td>Zubair</td>
+          <td>25</td>
+          <td>Pakistan</td>
+          <td>Islamabad</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Airpod</td>
+          <td>5000</td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td>25000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>30000</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th colspan="2">Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td rowspan="2">Math</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Physics</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
