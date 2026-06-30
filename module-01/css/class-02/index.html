@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Selectors</title>
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        color: darkblue;
+      }
+
+      section {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 8px;
+        background-color: #fafafa;
+      }
+
+      /* 1️⃣ BASIC SELECTORS */
+      p {
+        color: #333;
+      }
+
+      .note {
+        color: green;
+        font-weight: bold;
+      }
+
+      #unique {
+        background-color: #ffe6e6;
+        color: red;
+        padding: 4px;
+      }
+
+      /* 2️⃣ COMBINATOR SELECTORS */
+      /* Descendant Selector (space) */
+      div p {
+        color: purple;
+      }
+
+      /* Child Selector (>) */
+      div > span {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* Adjacent Sibling (+) */
+      h2 + p {
+        color: orange;
+      }
+
+      /* General Sibling (~) */
+      h3 ~ p {
+        background-color: #f0f0f0;
+        padding: 5px;
+      }
+
+      /* 3️⃣ ATTRIBUTE SELECTORS */
+      a[href] {
+        color: darkgreen;
+      }
+
+      a[target="_blank"] {
+        color: crimson;
+      }
+
+      input[type="text"] {
+        border: 2px solid #007bff;
+        padding: 5px;
+      }
+
+      input[type="password"] {
+        border: 2px solid #ff6600;
+        padding: 5px;
+      }
+
+      /* 4️⃣ PSEUDO-CLASSES */
+      a:hover {
+        color: blue;
+        text-decoration: underline;
+      }
+
+      p:first-child {
+        color: brown;
+      }
+
+      p:last-child {
+        color: teal;
+      }
+
+      li:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      li:nth-child(even) {
+        background-color: #e0e0e0;
+      }
+
+      /* 5️⃣ PSEUDO-ELEMENTS */
+      p::first-line {
+        font-weight: bold;
+      }
+
+      p::first-letter {
+        font-size: 24px;
+        color: darkred;
+      }
+
+      p::selection {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎯 CSS Class 2 – Advanced Selectors</h1>
+
+    <section>
+      <h2>1️⃣ Basic Selectors Review</h2>
+      <p>Element selector applies style to all &lt;p&gt; tags.</p>
+      <p class="note">Class selector targets .note</p>
+      <p id="unique">ID selector targets #unique</p>
+    </section>
+
+    <section>
+      <h2>2️⃣ Combinator Selectors</h2>
+
+      <div>
+        <p>This is inside a &lt;div&gt; (descendant selector)</p>
+        <span>Child span (div > span)</span>
+      </div>
+
+      <p>This paragraph follows the above heading (adjacent sibling)</p>
+
+      <h3>Heading 3</h3>
+      <p>This paragraph follows h3 (general sibling ~)</p>
+      <p>This is another paragraph after h3 (also affected by ~)</p>
+    </section>
+
+    <section>
+      <h2>3️⃣ Attribute Selectors</h2>
+
+      <a href="https://example.com">Normal Link (href)</a><br />
+      <a href="https://google.com" target="_blank"
+        >Opens in New Tab (target="_blank")</a
+      ><br /><br />
+
+      <label>Username:</label>
+      <input type="text" placeholder="Enter your name" /><br /><br />
+
+      <label>Password:</label>
+      <input type="password" placeholder="Enter password" />
+    </section>
+
+    <section>
+      <h2>4️⃣ Pseudo-Classes</h2>
+
+      <p>Hover on the links below 👇</p>
+      <a href="#">Hover Me!</a> |
+      <a href="#">And Me!</a>
+
+      <div>
+        <p>This is the first child paragraph.</p>
+        <p>This is the middle paragraph.</p>
+        <p>This is the last child paragraph.</p>
+      </div>
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5️⃣ Pseudo-Elements</h2>
+      <p>
+        This paragraph demonstrates <strong>::first-line</strong> and
+        <strong>::first-letter</strong> pseudo-elements. Select and highlight
+        text to see the <strong>::selection</strong> effect.
+      </p>
+    </section>
+
+    <p style="text-align: center; font-style: italic">
+      ✨ Experiment with each selector to see how they work! ✨
+    </p>
+  </body>
+</html>
