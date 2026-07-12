@@ -231,6 +231,7 @@ h4 {
 
 .card-container {
   margin-top: 2rem;
+  border: 2px solid red;
 }
 
 .card-container::after {
@@ -247,7 +248,7 @@ h4 {
   float: left;
   margin: 0 0.3em;
   margin-bottom: 5rem;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .card::after {
@@ -327,6 +328,8 @@ h4 {
 
 /* ********** hamburger menu ********* */
 
+
+
 .hamburger-menu {
   display: none;
   float: right;
@@ -349,7 +352,9 @@ h4 {
   color: black;
   list-style-type: none;
   z-index: -1;
+
 }
+
 
 .hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
   display: block;
@@ -440,13 +445,24 @@ h4 {
 @media (max-width: 976px) {
   .nav-items {
     display: none;
-  }
+  } 
 
-  .btn-container {
+.btn-container {
     display: none;
   }
 
   .hamburger-menu {
     display: block;
   }
+
+  .card {
+    width: 48%;
+  }
+}
+
+
+@media (max-width: 500px) {
+    .card {
+      width: 100%;
+    }
 }

@@ -12,7 +12,7 @@
   
 }
 body {
-  color: #191a23;
+  color: var(--clr-bg-black);
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -71,7 +71,7 @@ p {
 
 .box a {
   text-decoration: none;
-  color: #191a23;
+  color: var(--clr-bg-black);
   font-weight: 500;
 }
 .shadow-theme {
