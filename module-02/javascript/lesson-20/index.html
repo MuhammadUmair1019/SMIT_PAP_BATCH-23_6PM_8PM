@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #grandparent {
+            max-width: 500px;
+            margin: auto;
+            background: #ffd6d6;
+            border: 3px solid #ff5c5c;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        #parent {
+            background: #fff0b3;
+            border: 3px solid #e6b800;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #child {
+            background: #cce5ff;
+            border: 3px solid #3385ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Todo List</h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <button>Add Todo</button>
+
+
+    <hr />
+
+    <div id="grandparent">
+        Grandparent
+
+        <div id="parent">
+            Parent
+
+            <button id="child">
+                Child
+            </button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
