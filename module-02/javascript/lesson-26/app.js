@@ -11,11 +11,13 @@ let colorCount = {};
 
 for (let i = 0; i < colors.length; i++) {
 
-    if (colorCount[colors[i]]) {
-        colorCount[colors[i]] = colorCount[colors[i]] + 1
-    } else {
-        colorCount[colors[i]] = 1
-    }
+    const color = colors[i]
+    colorCount[color] = (colorCount[color] || 0) + 1
+    // if (colorCount[colors[i]]) {
+    //     colorCount[colors[i]] = colorCount[colors[i]] + 1
+    // } else {
+    //     colorCount[colors[i]] = 1
+    // }
 
 }
 
@@ -44,7 +46,11 @@ console.log(colorCount)
 
 
 
-
+// let colorCount = colors.reduce((acc, color) => (acc[color] = (acc[color] || 0) + 1, acc), {});
+// let colorCount = colors.reduce((acc, color) => {
+//     acc[color] = (acc[color] || 0) + 1;
+//     return acc;
+// }, {});
 // let cartItems = [
 //     { product: "Burger", price: 500, quantity: 2 },
 //     { product: "Pizza", price: 1000, quantity: 1 },
