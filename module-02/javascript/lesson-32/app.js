@@ -1,22 +1,41 @@
 // FETCH API
 
-const getUsers = async () => {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+const getProducts = async () => {
+    const response = await fetch('https://dummyjson.com/products')
+    const data = await response.json()
 
-        if (!response.ok) {
-            throw new Error("Could not fetch the data!")
-        }
-
-        const data = await response.json()
-
-        console.log(data)
-    } catch (error) {
-        console.error(error)
-    }
+    console.log(data)
 }
 
-getUsers()
+getProducts()
+
+
+fetch('https://dummyjson.com/products')
+    .then(response => {
+        console.log(response)
+        return response.json()
+    }).then(data => console.log(data.products))
+    .catch(err => console.log(err))
+
+
+
+// const getUsers = async () => {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+
+//         if (!response.ok) {
+//             throw new Error("Could not fetch the data!")
+//         }
+
+//         const data = await response.json()
+
+//         console.log(data)
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
+
+// getUsers()
 
 // const getUsers = async () => {
 //     const response = await fetch('https://jsonplaceholder.typicode.com/users')

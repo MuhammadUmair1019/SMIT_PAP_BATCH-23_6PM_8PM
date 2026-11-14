@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        color: white;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        margin-bottom: 25px;
+        font-size: 28px;
+      }
+
+      .search-box {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        font-size: 15px;
+      }
+
+      button {
+        padding: 12px 15px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background: #00c6ff;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background: #009ed1;
+      }
+
+      .location-btn {
+        width: 100%;
+        margin-bottom: 20px;
+        background: #526bff;
+      }
+
+      .weather-icon {
+        font-size: 75px;
+        margin: 15px 0;
+      }
+
+      .temperature {
+        font-size: 55px;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: 20px;
+        margin: 10px 0;
+        text-transform: capitalize;
+      }
+
+      .city {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .detail-box {
+        background: rgba(255, 255, 255, 0.13);
+        padding: 18px 10px;
+        border-radius: 15px;
+      }
+
+      .detail-box p {
+        margin-top: 8px;
+        font-size: 14px;
+      }
+
+      .detail-box h3 {
+        font-size: 19px;
+      }
+
+      .message {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #ffcccc;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      @media (max-width: 400px) {
+        .container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🌤 Weather App</h1>
+
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />
+        <button onclick="searchWeather()">Search</button>
+      </div>
+
+      <button class="location-btn" onclick="getLocation()">
+        📍 Use My Location
+      </button>
+
+      <div id="weather">
+        <div class="weather-icon" id="icon">🌤️</div>
+
+        <div class="temperature" id="temperature">--°C</div>
+
+        <div class="description" id="description">Search for a city</div>
+
+        <div class="city" id="city">Weather Forecast</div>
+
+        <div class="details">
+          <div class="detail-box">
+            <h3>💧 <span id="humidity">--</span>%</h3>
+            <p>Humidity</p>
+          </div>
+
+          <div class="detail-box">
+            <h3>💨 <span id="wind">--</span> km/h</h3>
+            <p>Wind Speed</p>
+          </div>
+
+          <div class="detail-box">
+            <h3>🌡️ <span id="max">--</span>°C</h3>
+            <p>Maximum</p>
+          </div>
+
+          <div class="detail-box">
+            <h3>❄️ <span id="min">--</span>°C</h3>
+            <p>Minimum</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="message" id="message"></p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
